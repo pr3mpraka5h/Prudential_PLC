@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Prudential</td>
+        <td>1</td>
+      <td>13 Jan 2023, 15:32</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">GoogleUI.choose_from_the_recommandation_and_validate_the_populated_top_response(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="15962600">0.015</td>
+              <td class="duration" data-value="15962600">0.015</td>
+              <td class="duration" data-value="15962600">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GoogleUI.close_the_browser_and_quit_the_driver()</td>
+              <td>4</td>
+              <td class="duration" data-value="636863475">0.636</td>
+              <td class="duration" data-value="636863475">0.651</td>
+              <td class="duration" data-value="2547453900">2.547</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GoogleUI.enter_keyword_should_auto_populate_all_relavant_suggestions()</td>
+              <td>1</td>
+              <td class="duration" data-value="1062393800">1.062</td>
+              <td class="duration" data-value="1062393800">1.062</td>
+              <td class="duration" data-value="1062393800">1.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GoogleUI.perform_search_operation_for_the_given_keyword_on_google()</td>
+              <td>3</td>
+              <td class="duration" data-value="2224188833">2.224</td>
+              <td class="duration" data-value="2224188833">2.830</td>
+              <td class="duration" data-value="6672566500">6.672</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GoogleUI.provided_with_search_keyword(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="3813065275">3.813</td>
+              <td class="duration" data-value="3813065275">5.047</td>
+              <td class="duration" data-value="15252261100">15.252</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GoogleUI.validate_all_the_recommended_list_contains_the_provided_keyword_or_not()</td>
+              <td>1</td>
+              <td class="duration" data-value="146606500">0.146</td>
+              <td class="duration" data-value="146606500">0.146</td>
+              <td class="duration" data-value="146606500">0.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GoogleUI.verify_that_the_landed_page_is_prudential_plc_homepage()</td>
+              <td>3</td>
+              <td class="duration" data-value="9198933">0.009</td>
+              <td class="duration" data-value="9198933">0.011</td>
+              <td class="duration" data-value="27596800">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GoogleUI.verify_the_top_response_as_expected_and_navigate()</td>
+              <td>3</td>
+              <td class="duration" data-value="3884533433">3.884</td>
+              <td class="duration" data-value="3884533433">4.392</td>
+              <td class="duration" data-value="11653600300">11.653</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>8</td>
+            <td>20</td>
+            <td class="duration">1.868</td>
+            <td class="duration">15.252</td>
+            <td class="duration">37.378</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
