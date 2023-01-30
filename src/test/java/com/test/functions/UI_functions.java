@@ -30,10 +30,25 @@ public class UI_functions {
 	{
 			
 			WebDriverManager.chromedriver().setup();
+			
+			
+//			ChromeOptions options = new ChromeOptions();
+//			DesiredCapabilities capabilities = new DesiredCapabilities();
+//			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+//			options.merge(capabilities);
+//			Driver = new ChromeDriver(options);
+			
+			
+			
+			
 			ChromeOptions options = new ChromeOptions();
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-			options.merge(capabilities);
+			options.addArguments("headless");
+			options.addArguments("--disable-gpu");
+			options.addArguments("disable-infobars");
+			options.addArguments("--disable-extensions");
+			options.addArguments("window-size=1200x800");
+			options.addArguments("--allow-insecure-localhost");
+			options.addArguments("--no-sandbox");
 			Driver = new ChromeDriver(options);
 			
 		return Driver;
