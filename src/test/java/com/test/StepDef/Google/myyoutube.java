@@ -1,4 +1,4 @@
-package com.test.runner;
+package com.test.StepDef.Google;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +14,10 @@ public class myyoutube {
 	static WebDriver drvier=null;
 	
 	static By play=By.xpath("//*[@class='ytp-play-button ytp-button']");
+	static By mute=By.xpath("//*[@class='ytp-mute-button ytp-button']");
+	
+	
+	
 	
 	@Given("Provided Youtube")
 	public void provided_youtube() throws InterruptedException {
@@ -29,6 +33,7 @@ public class myyoutube {
 			Thread.sleep(5000);
 			
 			UI_functions.mouse_click(drvier, play);
+			UI_functions.mouse_click(drvier, mute);
 			
 			Thread.sleep(35000);
 			drvier.quit();
