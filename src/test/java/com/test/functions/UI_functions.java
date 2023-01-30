@@ -96,8 +96,15 @@ public class UI_functions {
 	public static void wait_visibleelement(WebDriver Driver, By element)
 	{
 		@SuppressWarnings("deprecation")
-		WebDriverWait wait = new WebDriverWait(Driver, 100);
+		WebDriverWait wait = new WebDriverWait(Driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+	}
+	
+	public static void wait_elementclickable(WebDriver Driver, By element)
+	{
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(Driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
 	public static List FindElements(WebDriver Driver, By element)

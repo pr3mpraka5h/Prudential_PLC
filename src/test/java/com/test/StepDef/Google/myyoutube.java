@@ -16,7 +16,7 @@ public class myyoutube {
 	static By play=By.xpath("//*[@class='ytp-play-button ytp-button']");
 	static By mute=By.xpath("//*[@class='ytp-mute-button ytp-button']");
 	
-	
+	int count=0;
 	
 	
 	@Given("Provided Youtube")
@@ -32,11 +32,12 @@ public class myyoutube {
 			
 			Thread.sleep(5000);
 			
-			UI_functions.mouse_click(drvier, play);
 			UI_functions.mouse_click(drvier, mute);
+			UI_functions.mouse_click(drvier, play);
 			
 			Thread.sleep(35000);
 			drvier.quit();
+			System.out.println(count+1);
 		}
 		
 	}
