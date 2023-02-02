@@ -81,18 +81,7 @@
 			</exclusions>
 		</dependency>
 		
-		<dependency>
-			<groupId>io.rest-assured</groupId>
-			<artifactId>spring-mock-mvc</artifactId>
-			<version>3.3.0</version>
-			<scope>compile</scope>
-			<exclusions>
-				<exclusion>
-					<artifactId>rest-assured</artifactId>
-					<groupId>io.rest-assured</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+		
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -150,7 +139,7 @@
 </dependency>
 	</dependencies>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>src/test/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
